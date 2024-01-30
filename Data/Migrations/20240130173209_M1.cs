@@ -58,7 +58,7 @@ namespace ProvinceCity.Data.Migrations
                 {
                     ProvinceCode = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
                     ProvinceName = table.Column<string>(type: "TEXT", nullable: true),
-                    Citiess = table.Column<string>(type: "TEXT", nullable: true)
+                    CitiesString = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -194,12 +194,12 @@ namespace ProvinceCity.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Province",
-                columns: new[] { "ProvinceCode", "Citiess", "ProvinceName" },
+                columns: new[] { "ProvinceCode", "CitiesString", "ProvinceName" },
                 values: new object[,]
                 {
-                    { "BC", "BC", "British Columbia " },
-                    { "ON", "CA", "Ontario" },
-                    { "QC", "AB", "Quebec" }
+                    { "BC", null, "British Columbia " },
+                    { "ON", null, "Ontario" },
+                    { "QC", null, "Quebec" }
                 });
 
             migrationBuilder.InsertData(

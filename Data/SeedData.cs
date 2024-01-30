@@ -84,17 +84,29 @@ public static class SeedData {
             new Province() {    // 1
                 ProvinceCode="BC",
                 ProvinceName="British Columbia ",
-                Citiess="BC",
+                // Cities=new List<City>() {
+                //     new City() { CityName = "Vancouver"},
+                //     new City() { CityName = "Victoria"},
+                //     new City() { CityName = "Surrey"},
+                // }
             },
             new Province() {    //2
                 ProvinceCode="ON",
                 ProvinceName="Ontario",
-                Citiess="CA",
+                // Cities=new List<City>() {
+                //     new City() { CityName = "Toronto"},
+                //     new City() { CityName = "Ottawa"},
+                //     new City() { CityName = "Mississauga"},
+                // }
             },
             new Province() {    // 3
                 ProvinceCode="QC",
                 ProvinceName="Quebec",
-                Citiess="AB",
+                // Cities=new List<City>() {
+                //     new City() { CityName = "Montreal"},
+                //     new City() { CityName = "Quebec"},
+                //     new City() { CityName = "Laval"},
+                // }
             },
         };
 

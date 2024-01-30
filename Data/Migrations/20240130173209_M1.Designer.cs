@@ -11,8 +11,8 @@ using ProvinceCity.Data;
 namespace ProvinceCity.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240127214757_Rename")]
-    partial class Rename
+    [Migration("20240130173209_M1")]
+    partial class M1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -223,8 +223,7 @@ namespace ProvinceCity.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CityName")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("City");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Population")
                         .HasColumnType("INTEGER");
@@ -309,16 +308,13 @@ namespace ProvinceCity.Data.Migrations
                 {
                     b.Property<string>("ProvinceCode")
                         .HasMaxLength(30)
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Province Code");
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Citiess")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Cities");
+                    b.Property<string>("CitiesString")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProvinceName")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Province");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ProvinceCode");
 
@@ -328,19 +324,16 @@ namespace ProvinceCity.Data.Migrations
                         new
                         {
                             ProvinceCode = "BC",
-                            Citiess = "BC",
                             ProvinceName = "British Columbia "
                         },
                         new
                         {
                             ProvinceCode = "ON",
-                            Citiess = "CA",
                             ProvinceName = "Ontario"
                         },
                         new
                         {
                             ProvinceCode = "QC",
-                            Citiess = "AB",
                             ProvinceName = "Quebec"
                         });
                 });

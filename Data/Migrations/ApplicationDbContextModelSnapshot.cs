@@ -307,7 +307,7 @@ namespace ProvinceCity.Data.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Citiess")
+                    b.Property<string>("CitiesString")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProvinceName")
@@ -321,19 +321,16 @@ namespace ProvinceCity.Data.Migrations
                         new
                         {
                             ProvinceCode = "BC",
-                            Citiess = "BC",
                             ProvinceName = "British Columbia "
                         },
                         new
                         {
                             ProvinceCode = "ON",
-                            Citiess = "CA",
                             ProvinceName = "Ontario"
                         },
                         new
                         {
                             ProvinceCode = "QC",
-                            Citiess = "AB",
                             ProvinceName = "Quebec"
                         });
                 });

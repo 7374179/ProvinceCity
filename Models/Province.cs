@@ -11,7 +11,6 @@ public class Province
 {
     [Key]
     [MaxLength(30)]
-
     [Display(Name = "Province Code")]
     public string? ProvinceCode { get; set; }
 
@@ -20,8 +19,9 @@ public class Province
     public string? ProvinceName { get; set; }
 
     [Display(Name = "Cities")]
-    public string? Citiess { get; set; }
+    public string? CitiesString { get; set; }
     
-    public List<City>? Cities { get; set; }
+    public ICollection<City>? Cities { get; set; }
+    // public List<City>? Cities { get; set; }
 
 }

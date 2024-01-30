@@ -49,6 +49,10 @@ namespace ProvinceCity.Controllers
         public IActionResult Create()
         {
             // ViewData["ProvinceName"] = new SelectList(_context.Province, "ProvinceName", "ProvinceName");
+            ViewBag.ProvinceCode = new SelectList(_context.Provinces
+                                .GroupBy(c => c.ProvinceCode)
+                                .Select(g => g.First()), "ProvinceCode", "ProvinceCode");
+
             return View();
         }
 
@@ -81,6 +85,10 @@ namespace ProvinceCity.Controllers
             {
                 return NotFound();
             }
+            ViewBag.ProvinceCode = new SelectList(_context.Provinces
+                    .GroupBy(c => c.ProvinceCode)
+                    .Select(g => g.First()), "ProvinceCode", "ProvinceCode");
+
             return View(city);
         }
 
